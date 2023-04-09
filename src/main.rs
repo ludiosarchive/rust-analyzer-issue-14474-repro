@@ -11,14 +11,14 @@ use futures_async_stream::stream;
 
 type Aes128Ctr = ctr::Ctr64BE<aes::Aes128>;
 
-async fn empty_stream() -> impl Stream<Item = ()> {
+fn empty_stream() -> impl Stream<Item = ()> {
     futures::stream::empty()
 }
 
 fn stream_file() -> impl Stream<Item = ()> {
     #[stream]
     async move {
-        let stream = empty_stream().await;
+        let stream = empty_stream();
         let key = GenericArray::from_slice(&[0; 16]);
         let cipher = Aes128Ctr::new(key, key);
 
