@@ -20,8 +20,7 @@ fn stream_file() -> impl Stream<Item = ()> {
     async move {
         let stream = empty_stream().await;
         let key = GenericArray::from_slice(&[0; 16]);
-        let nonce = GenericArray::from_slice(&[0; 16]);
-        let cipher = Aes128Ctr::new(key, nonce);
+        let cipher = Aes128Ctr::new(key, key);
 
         yield ();
     }
