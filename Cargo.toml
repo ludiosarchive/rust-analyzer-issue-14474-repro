@@ -8,4 +8,3 @@ authors = ["Ivan Kozik <ivan@ludios.org>"]
 aes = "0.8"
 ctr = "0.9"
 futures = "0.3"
-futures-async-stream = "0.2"
