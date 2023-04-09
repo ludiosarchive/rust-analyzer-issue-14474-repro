@@ -1,0 +1,11 @@
+[package]
+name = "rust-analyzer-issue-14474-repro"
+version = "1.0.0"
+edition = "2021"
+authors = ["Ivan Kozik <ivan@ludios.org>"]
+
+[dependencies]
+aes = "0.8"
+ctr = "0.9"
+futures = "0.3"
+futures-async-stream = "0.2"
