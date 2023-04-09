@@ -1,3 +1,5 @@
+This project should `cargo build` fine with Rust nightly, but rust-analyzer has issues.
+
 git clone https://github.com/ludios/rust-analyzer-issue-14474-repro
 cd rust-analyzer-issue-14474-repro
 wget https://github.com/rust-lang/rust-analyzer/releases/download/2023-04-04/rust-analyzer-x86_64-unknown-linux-gnu.gz
